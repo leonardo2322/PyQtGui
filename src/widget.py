@@ -1,35 +1,43 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QDockWidget, QHBoxLayout, QLayout, QMainWindow, QWidget, QGridLayout,QPushButton,QLabel,QLineEdit
+from PyQt6.QtWidgets import (
+    QApplication,
+    QDockWidget,
+    QHBoxLayout,
+    QLayout,
+    QMainWindow,
+    QWidget,
+    QGridLayout,
+    QPushButton,
+    QLabel,
+    QLineEdit,
+    QTabWidget,
+)
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtCore import Qt
 import Fm
 
-class Window(QMainWindow):
+
+class Window(QWidget):
     def __init__(self, *arg, **kwarg):
-        super(Window,self).__init__(*arg, **kwarg)
+        super(Window, self).__init__(*arg, **kwarg)
         # wid = Fm.windowbt(self)
-        self.setFixedSize(1250,1000)
-        self.setWindowTitle('EvaSystem')
-        
-        
+        self.setFixedSize(1250, 1000)
+        self.setWindowTitle("EvaSystem")
 
-        self.ventana = QDockWidget('ventana1',self)
-        self.ventana.setFixedSize(800,400)
-        self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea,self.ventana )
-        self.ventana.setAllowedAreas(Qt.DockWidgetArea.LeftDockWidgetArea | Qt.DockWidgetArea.RightDockWidgetArea)
+        btn = QPushButton("usuarios")
 
-        self.ventana2 = QDockWidget('ventana2', self)
-        self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, self.ventana2)
-        btn = QPushButton('usuarios', self.ventana)
-        btn.clicked.connect(lambda:self.fm())
+        saludo = print("click")
+        winds = QTabWidget()
+        btn.clicked.connect(lambda: saludo)
+        self.texttitle = QLabel("Proyect gui")
+        layout = QHBoxLayout()
+        layout.addWidget(self.texttitle)
+        layout.addWidget(btn)
+        layout.addWidget(winds)
+        self.setLayout(layout)
 
 
-
-    def fm(self):
-        vemt = Fm.windowbt()
-        vemt.show()
-        
-if __name__=="__main__":
+if __name__ == "__main__":
     app = QApplication(sys.argv)
     root = Window()
     root.show()

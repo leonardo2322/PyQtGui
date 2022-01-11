@@ -20,7 +20,3 @@ class windowbt(QWidget):
         layout.addWidget(show_text,1,0)
         layout.addWidget(entry,1,1)
         layout.addWidget(self.btn_Options,2,0)
-
-if __name__=="__main__":
-        app = QApplication(sys.argv)
-        sys.exit(app.exec())

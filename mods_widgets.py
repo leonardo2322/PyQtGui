@@ -1,0 +1,8 @@
+        # self.ventana = QDockWidget('ventana1',self)
+        # self.ventana.setFixedSize(800,400)
+        # self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea,self.ventana )
+        # self.ventana.setAllowedAreas(Qt.DockWidgetArea.LeftDockWidgetArea | Qt.DockWidgetArea.RightDockWidgetArea)
+        # self.ventana.setFloating(False)
+                # self.ventana2 = QDockWidget('ventana2', self)
+        # self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, self.ventana2)
+        # self.ventana2.setFixedSize(300,200)
